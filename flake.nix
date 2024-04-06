@@ -23,10 +23,6 @@
 
       shellHook = ''
         exec $SHELL
-
-        # Правило для устройства ST-LINK/V2.1
-        echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="374b", MODE="0666"'>/etc/udev/rules.d/99-st-link.rules
-        udevadm control --reload-rules
       '';
     };
   };
